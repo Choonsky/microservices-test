@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89a87a45-ca01-48b2-ab65-3707f9324ce7" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/docker/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/docker/product-service-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/src/main/docker/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/src/main/docker/review-service-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="89a87a45-ca01-48b2-ab65-3707f9324ce7" name="Changes" comment="Docker config added">
+      <change afterPath="$PROJECT_DIR$/review-service/src/test/java/com/nemirovsky/reviewservice/ReviewServiceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/review-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/review-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/nemirovsky/reviewservice/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/review-service/src/main/java/com/nemirovsky/reviewservice/service/ReviewService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,8 +51,8 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "configurable.group.language",
     "show.run.dashboard.notification": "false"
@@ -73,6 +64,9 @@
       <recent name="C:\_Repo\microservices-test\product-service\src\main\docker" />
       <recent name="C:\_Repo\microservices-test\review-service\src\main\java\com\nemirovsky\reviewservice" />
       <recent name="C:\_Repo\microservices-test\review-service\src\main\java\com\nemirovsky\reviewservice\service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\_Repo\microservices-test\review-service\src\test\java\com\nemirovsky\reviewservice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.nemirovsky.reviewservice.repository" />
@@ -122,7 +116,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667883628110</updated>
-      <workItem from="1667883629809" duration="2742000" />
+      <workItem from="1667883629809" duration="3698000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1667884495098</created>
@@ -131,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667884495098</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Docker config added">
+      <created>1667886407753</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667886407753</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +152,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Docker config added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Docker config added" />
   </component>
 </project>
