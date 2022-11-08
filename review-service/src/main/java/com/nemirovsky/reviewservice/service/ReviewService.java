@@ -46,9 +46,10 @@ public class ReviewService {
         updates.keySet()
                 .forEach(key -> {
                     switch (key) {
-                        case "averageReviewScore" ->
-                                reviewsInfo.setAverageReviewScore(Float.parseFloat(updates.get(key)));
-                        case "numberOfReviews" -> reviewsInfo.setNumberOfReviews(Integer.parseInt(updates.get(key)));
+                        case "averageReviewScore":
+                            reviewsInfo.setAverageReviewScore(Float.parseFloat(updates.get(key)));
+                        case "numberOfReviews":
+                            reviewsInfo.setNumberOfReviews(Integer.parseInt(updates.get(key)));
                     }
                 });
         return reviewRepository.save(reviewsInfo);

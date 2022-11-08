@@ -1,0 +1,34 @@
+---
+version: '3'
+services:
+
+  ## Mongo Docker Compose Config
+  mongo:
+    container_name: mongo
+    image: mongo:4.4.14-rc0-focal
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    expose:
+      - "27017"
+    volumes:
+      - ./mongo-data:/data/db
+
+  ## Review Service Docker Compose Config
+  review-service:
+    container_name: review-service
+    image: choonsky/review-service:latest
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - mongo
+
+  ## Product Service Docker Compose Config
+  product-service:
+    container_name: product-service
+    image: choonsky/product-service:latest
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - mongo
+      - review-service
