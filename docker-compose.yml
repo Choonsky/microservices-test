@@ -2,6 +2,30 @@
 version: '3'
 services:
 
+  ## Zookeeper Docker Compose Config
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "22181:2181"
+
+  ## Kafka Docker Compose Config
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    depends_on:
+      - zookeeper
+    ports:
+      - "29092:29092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
   ## Mongo Docker Compose Config
   mongo:
     container_name: mongo
@@ -14,6 +38,13 @@ services:
     volumes:
       - ./mongo-data:/data/db
 
+  ## Eureca Server Compose Config
+  eureka-server:
+    container_name: eureka-server
+    image: choonsky/eureka-server:latest
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
   ## Review Service Docker Compose Config
   review-service:
     container_name: review-service
@@ -21,7 +52,9 @@ services:
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     depends_on:
+      - kafka
       - mongo
+      - eureka-server
 
   ## Product Service Docker Compose Config
   product-service:
@@ -30,5 +63,7 @@ services:
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     depends_on:
+      - kafka
       - mongo
       - review-service
+      - eureka-server

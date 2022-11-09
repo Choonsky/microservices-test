@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89a87a45-ca01-48b2-ab65-3707f9324ce7" name="Changes" comment="Eureka clients added">
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/test/java/com/nemirovsky/eurekaserver/SpringContextTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/model/ReviewsInfoEx.java" afterDir="false" />
+    <list default="true" id="89a87a45-ca01-48b2-ab65-3707f9324ce7" name="Changes" comment="Data aggregation (Live API + Review Service) improved">
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/kafka/KafkaSender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/review-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/review-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +140,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667883628110</updated>
       <workItem from="1667883629809" duration="16210000" />
-      <workItem from="1667966581260" duration="14902000" />
+      <workItem from="1667966581260" duration="17820000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1667884495098</created>
@@ -195,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667972448929</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Data aggregation (Live API + Review Service) improved">
+      <created>1667987225257</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667987225257</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +224,7 @@
     <MESSAGE value="Integration test added for product service" />
     <MESSAGE value="Eureka server added" />
     <MESSAGE value="Eureka clients added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Eureka clients added" />
+    <MESSAGE value="Data aggregation (Live API + Review Service) improved" />
+    <option name="LAST_COMMIT_MESSAGE" value="Data aggregation (Live API + Review Service) improved" />
   </component>
 </project>
