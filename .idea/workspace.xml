@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89a87a45-ca01-48b2-ab65-3707f9324ce7" name="Changes" comment="Integration tests added">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/review-service/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="89a87a45-ca01-48b2-ab65-3707f9324ce7" name="Changes" comment="Integration tests and authorization improved">
+      <change afterPath="$PROJECT_DIR$/product-service/src/test/java/com/nemirovsky/productservice/ProductServiceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/review-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/review-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/review-service/src/main/docker/review-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/review-service/src/main/docker/review-service-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/nemirovsky/reviewservice/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/review-service/src/main/java/com/nemirovsky/reviewservice/security/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/review-service/src/test/java/com/nemirovsky/reviewservice/ReviewServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/review-service/src/test/java/com/nemirovsky/reviewservice/ReviewServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/nemirovsky/reviewservice/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/review-service/src/main/java/com/nemirovsky/reviewservice/security/SecurityConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +58,8 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.38965517",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "show.run.dashboard.notification": "false"
+    "show.run.dashboard.notification": "false",
+    "spring.configuration.checksum": "81a9ac6c00e0e87e62a1fb86e364ffda"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -76,6 +74,7 @@
       <recent name="C:\_Repo\microservices-test\review-service\src\test\java\com\nemirovsky\reviewservice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="productservice" />
       <recent name="com.nemirovsky.reviewservice.repository" />
       <recent name="com.nemirovsky.reviewservice.model" />
       <recent name="com.nemirovsky.reviewservice.controller" />
@@ -123,7 +122,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667883628110</updated>
-      <workItem from="1667883629809" duration="14720000" />
+      <workItem from="1667883629809" duration="16210000" />
+      <workItem from="1667966581260" duration="1153000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1667884495098</created>
@@ -146,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667888517098</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Integration tests and authorization improved">
+      <created>1667905437415</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667905437415</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +175,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Docker config added" />
     <MESSAGE value="Integration tests added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integration tests added" />
+    <MESSAGE value="Integration tests and authorization improved" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integration tests and authorization improved" />
   </component>
 </project>

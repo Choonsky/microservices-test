@@ -29,7 +29,8 @@ public class SecurityConfiguration {
                 .anyRequest().authenticated()
                 .and().httpBasic()
                 .and().cors()
-                .and().csrf().disable();
+                .and().csrf().disable()
+                .csrf().ignoringAntMatchers("/review/*");
         return http.build();
     }
 

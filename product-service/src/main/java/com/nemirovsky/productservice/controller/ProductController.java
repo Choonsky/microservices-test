@@ -10,12 +10,12 @@ import java.io.IOException;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/review")
+@RequestMapping("/product")
 public class ProductController {
 
     private final ProductService productService;
 
-    @GetMapping("product/{productId}")
+    @GetMapping("/{productId}")
     @ResponseStatus(HttpStatus.OK)
     public JSONObject findProductInfo(@PathVariable String productId) throws IOException, InterruptedException {
         return productService.findByProductId(productId);
