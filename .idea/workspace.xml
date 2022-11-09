@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89a87a45-ca01-48b2-ab65-3707f9324ce7" name="Changes" comment="Eureka server added">
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="89a87a45-ca01-48b2-ab65-3707f9324ce7" name="Changes" comment="Eureka clients added">
+      <change afterPath="$PROJECT_DIR$/eureka-server/src/test/java/com/nemirovsky/eurekaserver/SpringContextTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/model/ReviewsInfoEx.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/review-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/review-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/review-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/review-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +32,6 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenRunner">
-    <option name="skipTests" value="true" />
   </component>
   <component name="ProjectId" id="2HFb9aINHqDgYoczYV1oRQqHwnS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -53,7 +53,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "temurin-11",
-    "last_opened_file_path": "C:/_Repo/microservices-test/review-service/src/main/docker",
+    "last_opened_file_path": "C:/_Repo/microservices-test/eureka-server/src/test",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,6 +69,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\_Repo\microservices-test\eureka-server\src\test" />
       <recent name="C:\_Repo\microservices-test\review-service\src\main\docker" />
       <recent name="C:\_Repo\microservices-test\product-service\src\main\docker" />
       <recent name="C:\_Repo\microservices-test\review-service\src\main\java\com\nemirovsky\reviewservice" />
@@ -79,13 +80,14 @@
       <recent name="C:\_Repo\microservices-test\review-service\src\test\java\com\nemirovsky\reviewservice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.nemirovsky.productservice.model" />
       <recent name="productservice" />
       <recent name="com.nemirovsky.reviewservice.repository" />
       <recent name="com.nemirovsky.reviewservice.model" />
       <recent name="com.nemirovsky.reviewservice.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ReviewServiceApplication">
+  <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
     <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="eureka-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.nemirovsky.eurekaserver.EurekaServerApplication" />
@@ -127,8 +129,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ReviewServiceApplication" />
         <item itemvalue="Spring Boot.ProductServiceApplication" />
+        <item itemvalue="Spring Boot.ReviewServiceApplication" />
         <item itemvalue="Spring Boot.EurekaServerApplication" />
       </list>
     </recent_temporary>
@@ -142,7 +144,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667883628110</updated>
       <workItem from="1667883629809" duration="16210000" />
-      <workItem from="1667966581260" duration="5566000" />
+      <workItem from="1667966581260" duration="14902000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1667884495098</created>
@@ -186,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667970448792</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Eureka clients added">
+      <created>1667972448929</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667972448929</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +220,7 @@
     <MESSAGE value="Integration tests and authorization improved" />
     <MESSAGE value="Integration test added for product service" />
     <MESSAGE value="Eureka server added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Eureka server added" />
+    <MESSAGE value="Eureka clients added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Eureka clients added" />
   </component>
 </project>
