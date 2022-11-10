@@ -20,7 +20,7 @@ public class ProductController {
     @GetMapping("/{productId}")
     @ResponseStatus(HttpStatus.OK)
     public Map<String, Object> findProductInfo(@PathVariable String productId) throws IOException, InterruptedException {
-        kafkaSender.send(productId);
+
         return productService.findByProductId(productId);
     }
 

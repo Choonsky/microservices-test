@@ -1,0 +1,18 @@
+server:
+  port: 8081
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/reviews-service
+  application:
+    name: review-service
+  kafka:
+    bootstrap-servers: kafka:9092
+    consumer:
+      group-id: reverse-consumer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: com.nemirovsky.reviewservice.model
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer

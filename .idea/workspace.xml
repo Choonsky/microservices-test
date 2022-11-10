@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89a87a45-ca01-48b2-ab65-3707f9324ce7" name="Changes" comment="Kafka messaging added">
-      <change afterPath="$PROJECT_DIR$/review-service/src/main/java/com/nemirovsky/reviewservice/kafka/KafkaSender.java" afterDir="false" />
+    <list default="true" id="89a87a45-ca01-48b2-ab65-3707f9324ce7" name="Changes" comment="Docker compose ports exposed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/model/ReviewsInfoEx.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/kafka/KafkaSender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/review-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/nemirovsky/reviewservice/kafka/KafkaSender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/java/com/nemirovsky/reviewservice/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/review-service/src/main/java/com/nemirovsky/reviewservice/service/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/review-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/review-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +145,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667883628110</updated>
       <workItem from="1667883629809" duration="16210000" />
-      <workItem from="1667966581260" duration="20188000" />
+      <workItem from="1667966581260" duration="23905000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1667884495098</created>
@@ -203,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667993391370</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Docker compose ports exposed">
+      <created>1668049926014</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1668049926014</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,6 +245,7 @@
     <MESSAGE value="Eureka clients added" />
     <MESSAGE value="Data aggregation (Live API + Review Service) improved" />
     <MESSAGE value="Kafka messaging added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kafka messaging added" />
+    <MESSAGE value="Docker compose ports exposed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Docker compose ports exposed" />
   </component>
 </project>

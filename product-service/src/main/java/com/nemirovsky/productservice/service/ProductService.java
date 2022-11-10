@@ -2,16 +2,19 @@ package com.nemirovsky.productservice.service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.nemirovsky.productservice.model.ReviewsInfoEx;
+import com.nemirovsky.reviewservice.model.ReviewsInfo;
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.discovery.EurekaClient;
 import com.netflix.discovery.shared.Application;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.json.JSONException;
-import org.json.JSONObject;
+import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.apache.kafka.clients.producer.ProducerRecord;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.kafka.requestreply.ReplyingKafkaTemplate;
+import org.springframework.kafka.requestreply.RequestReplyFuture;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Mono;
 
 import java.io.IOException;
 import java.net.ProxySelector;
@@ -30,6 +33,7 @@ import java.util.stream.Stream;
 @RequiredArgsConstructor
 public class ProductService {
 
+    private final ReplyingKafkaTemplate<?, String, ReviewsInfo> replyingKafkaTemplate;
     private static EurekaClient eurekaClient;
 
     @Value("${adidas.live.api.domain}")
@@ -74,34 +78,24 @@ public class ProductService {
         }
         return null;
     }
-    private Map<String, Object> getReviewsInfo(String productId) throws IOException, InterruptedException {
 
-        String endpoint = getReviewHostName(getReviewService()) + ":" + getReviewHostPort(getReviewService()) + "/review/" + productId;
-
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(endpoint))
-                .GET()
-                .timeout(Duration.ofSeconds(5))
-                .build();
-
-        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-
-        if (response.statusCode() != 200 && response.statusCode() != 404) {
-            throw new RuntimeException("An issue occurred making the API call to " + request.uri() + "!");
-        }
-
+    private Map<String, Object> getReviewsInfo(String productId) {
+        final RequestReplyFuture<?, String, ReviewsInfo> future = replyingKafkaTemplate.sendAndReceive(new ProducerRecord<>("nemirovsky", productId));
+        ReviewsInfo reviewsInfo = Mono.fromFuture(future.completable())
+                .map(ConsumerRecord::value).block();
         ObjectMapper mapper = new ObjectMapper();
+        Map<String, Object> result = new HashMap<>();
         try {
-            return mapper.readValue(
-                    response.body(), new TypeReference<Map<String, Object>>() {
-                    });
+            result = mapper.convertValue(reviewsInfo, new TypeReference<Map<String, Object>>() {
+            });
         } catch (Exception e) {
-            log.error("Error mapping JSON object to Map!");
+            log.error("Error converting JSON object to Map!");
             e.printStackTrace();
         }
-        return null;
+        return result;
     }
 
+    // Was used before Kafka
     private InstanceInfo getReviewService() {
         if (eurekaClient == null) return null;
         Application app = eurekaClient
@@ -111,10 +105,12 @@ public class ProductService {
         } else return null;
     }
 
+    // Was used before Kafka
     private String getReviewHostPort(InstanceInfo service) {
         return service == null ? "8081" : String.valueOf(service.getPort());
     }
 
+    // Was used before Kafka
     private String getReviewHostName(InstanceInfo service) {
         return service == null ? "http://localhost" : service.getHostName();
     }
