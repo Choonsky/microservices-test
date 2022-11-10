@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89a87a45-ca01-48b2-ab65-3707f9324ce7" name="Changes" comment="Data aggregation (Live API + Review Service) improved">
-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/kafka/KafkaSender.java" afterDir="false" />
+    <list default="true" id="89a87a45-ca01-48b2-ab65-3707f9324ce7" name="Changes" comment="Kafka messaging added">
+      <change afterPath="$PROJECT_DIR$/review-service/src/main/java/com/nemirovsky/reviewservice/kafka/KafkaSender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/nemirovsky/productservice/model/ReviewsInfoEx.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,11 +74,11 @@
       <recent name="C:\_Repo\microservices-test\review-service\src\test\java\com\nemirovsky\reviewservice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.nemirovsky.reviewservice.kafka" />
       <recent name="com.nemirovsky.productservice.model" />
       <recent name="productservice" />
       <recent name="com.nemirovsky.reviewservice.repository" />
       <recent name="com.nemirovsky.reviewservice.model" />
-      <recent name="com.nemirovsky.reviewservice.controller" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
@@ -140,7 +138,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667883628110</updated>
       <workItem from="1667883629809" duration="16210000" />
-      <workItem from="1667966581260" duration="17820000" />
+      <workItem from="1667966581260" duration="20188000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1667884495098</created>
@@ -198,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667987225257</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Kafka messaging added">
+      <created>1667993391370</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667993391370</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +230,7 @@
     <MESSAGE value="Eureka server added" />
     <MESSAGE value="Eureka clients added" />
     <MESSAGE value="Data aggregation (Live API + Review Service) improved" />
-    <option name="LAST_COMMIT_MESSAGE" value="Data aggregation (Live API + Review Service) improved" />
+    <MESSAGE value="Kafka messaging added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kafka messaging added" />
   </component>
 </project>
