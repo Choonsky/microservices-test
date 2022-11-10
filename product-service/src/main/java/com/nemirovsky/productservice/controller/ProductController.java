@@ -1,6 +1,5 @@
 package com.nemirovsky.productservice.controller;
 
-import com.nemirovsky.productservice.kafka.KafkaSender;
 import com.nemirovsky.productservice.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -16,7 +15,6 @@ public class ProductController {
 
     private final ProductService productService;
 
-    private final KafkaSender kafkaSender;
     @GetMapping("/{productId}")
     @ResponseStatus(HttpStatus.OK)
     public Map<String, Object> findProductInfo(@PathVariable String productId) throws IOException, InterruptedException {
